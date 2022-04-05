@@ -1,0 +1,257 @@
+body
+    //width: 100%
+    //height: 100%
+    //overflow: hidden
+    //position: relative
+    ////background: url('../img/bg.png') no-repeat
+    //background: url('../img/bg-new.png') no-repeat
+    //background-size: cover
+    //background-color: #000
+.lend-wrapp
+    width: 100%
+    //height: 100%
+    height: 100vh
+    overflow: hidden
+    position: relative
+    //background: url('../img/bg.png') no-repeat
+    background: url('../img/bg-new.png') no-repeat
+    background-size: cover
+    background-color: #000
+.first-step
+    position: relative
+    display: none
+    &.active
+        display: block
+.logo
+    //width: 282px
+    width: 230px
+    margin: 0 auto
+    padding-top: 15px
+.wheel
+    //width: 756px
+    //height: 756px
+    width: 656px
+    height: 656px
+    position: relative
+    //margin: 66px auto 0
+    margin: 35px auto 0
+    &-circle
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+    &-main
+        //width: 744px
+        width: 98.4%
+        position: absolute
+        //top: 6px
+        //left: 6px
+        top: 0.8%
+        left: 0.8%
+        z-index: 1
+        &.first-spin
+            transform: rotate(802deg)
+            animation: 3s ease-in-out 0s normal running first-spin
+        &.second-spin
+            transform: rotate(1814deg)
+            animation: 3s ease-in-out 0s normal running second-spin
+
+    &-btn
+        //width: 195px
+        width: 25.8%
+        position: absolute
+        //top: 228px
+        //left: calc(50% - (195px/2))
+        //bottom: 288px
+        bottom: 38.2%
+        left: 37%
+        z-index: 2
+        cursor: pointer
+        p
+            position: absolute
+            //bottom: 34px
+            bottom: 14.5%
+            bottom: 13%
+            width: 100%
+            text-align: center
+            font-family: 'Staatliches-Regular'
+            font-weight: 400
+            //font-size: 85px
+            font-size: 74px
+            line-height: 106px
+            color: #fff
+            animation: blink-spin 2s infinite
+        &:hover
+            p
+                color: #fcf285
+.character
+    //width: 721px
+    width: 500px
+    position: absolute
+    bottom: 0
+    right: 0
+    z-index: 1
+.information
+    width: 942px
+    //height: 124px
+    height: 100px
+    //border: 3px solid
+    //border-image-source: linear-gradient(180deg, #B46729 0%, #E09C4B 100%)
+    position: relative
+    z-index: 2
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 3px solid #df9b4a
+    border-radius: 19px
+    //margin: 38px auto 0
+    margin: 25px auto 0
+    background: #46041B
+    &__start
+        position: relative
+        align-items: center
+    &__bonus, &__bonus-fs
+        text-transform: uppercase
+    &__bonus-fs
+        flex-direction: column
+        align-items: center
+    &__start, &__bonus, &__bonus-fs
+        display: none
+        font-family: 'Roboto-Medium'
+        font-weight: 700
+        //font-size: 48px
+        font-size: 40px
+        //line-height: 56px
+        line-height: 46px
+        color: #FCBC3D
+        span
+            margin: 0 47px
+        img
+            animation: arrow-up 2s infinite
+        &.active
+            display: flex
+.spins
+    //width: 291px
+    //height: 136px
+    width: 250px
+    height: 120px
+    position: absolute
+    left: 72px
+    top: 180px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    border-radius: 19px
+    border: 3px solid #df9b4a
+    font-family: 'Roboto-Medium'
+    font-weight: 700
+    //font-size: 48px
+    font-size: 40px
+    //line-height: 56px
+    line-height: 46px
+    text-align: center
+    background: #46041B
+    color: #FCBC3D
+.second-step
+    width: 100%
+    position: relative
+    .win-info
+        width: 1136px
+        height: 770px
+        position: absolute
+        top: 200vh
+        left: calc( 50% - (1136px/2))
+        transition-duration: 1s
+        background: url('../img/final-bg.png') no-repeat
+        background-size: cover
+        p
+            padding: 221px 0 0 56px
+            font-family: 'Roboto-Medium'
+            font-weight: 700
+            font-size: 85px
+            line-height: 100px
+            text-transform: uppercase
+            color: #FCBC3D
+            span
+                display: block
+        a
+            width: 559px
+            height: 91px
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 2px solid #FCBC3D
+            border-radius: 14px
+            margin: 50px 0 0 56px
+            font-family: 'Roboto-Medium'
+            font-weight: 700
+            font-size: 48px
+            line-height: 56px
+            text-transform: uppercase
+            text-decoration: none
+            color: #FCBC3D
+            animation: blink 3s infinite
+    .character-win
+        width: 600px
+        position: absolute
+        top: 66px
+        right: 0px
+        z-index: 1
+        display: none
+    &.active
+        .win-info
+            top: 0px
+        .character-win
+            display: block
+            img
+                &.desc
+                    display: block
+                &.mob
+                    display: none
+
+
+
+
+@keyframes arrow-up
+    0%
+        opacity: 0
+        transform: translate(0, 18px)
+    50%
+        opacity: 1
+    100%
+        opacity: 0
+        transform: translate(0, -18px)
+
+@keyframes first-spin
+    0%
+        transform: rotate(0deg)
+
+    100%
+        transform: rotate(802deg)
+
+@keyframes second-spin
+    0%
+        transform: rotate(802deg)
+
+    100%
+        transform: rotate(1814deg)
+
+@keyframes blink
+    0%
+        background: #46041B
+        color: #FCBC3D
+    50%
+        background: #FCBC3D
+        color: #46041B
+    100%
+        background: #46041B
+        color: #FCBC3D
+
+@keyframes blink-spin
+    0%
+        color: #fff
+    50%
+        color: #fcf285
+    100%
+        color: #fff

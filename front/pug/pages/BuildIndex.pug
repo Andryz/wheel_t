@@ -1,0 +1,36 @@
+.lend-wrapp
+    .logo
+        img(src='./img/logo.png')
+
+    .first-step(id='first-step').active
+        .wheel
+            .wheel-circle
+                img(src='./img/circle.png')
+            .wheel-main(id='wheel')
+                img(src='./img/wheel.png')
+            .wheel-btn(id='wheel-btn')
+                img(src='./img/btn-spin.png')
+                p SPIN
+        .character
+            img(src='./img/character.png')
+        .information(id='information')
+            .information__start.active(id='info-start')
+                img(src='./img/arrow.svg')
+                span Try your luck. Spin the wheel
+                img(src='./img/arrow.svg')
+            .information__bonus 200% deposit bonus
+            .information__bonus-fs
+                p 200% deposit bonus
+                p 150FS
+        .spins
+            | Spins left:
+            p(id='spins') 2
+
+    .second-step(id='second-step')
+        .win-info
+            p 200% deposit bonus
+                span + 150 FreeSpins
+            a(href='#') take bonus
+        .character-win
+            img(src='./img/character-win.png').desc
+            img(src='./img/character-win-mob.png').mob
