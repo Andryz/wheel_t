@@ -112,9 +112,11 @@ body
         align-items: center
     &__bonus, &__bonus-fs
         text-transform: uppercase
-    &__bonus-fs
         flex-direction: column
         align-items: center
+    //&__bonus-fs
+    //    flex-direction: column
+    //    align-items: center
     &__start, &__bonus, &__bonus-fs
         display: none
         font-family: 'Roboto-Medium'
@@ -166,7 +168,8 @@ body
         background: url('../img/final-bg.png') no-repeat
         background-size: cover
         p
-            padding: 221px 0 0 56px
+            //padding: 221px 0 0 56px
+            padding: 172px 0 0 56px
             font-family: 'Roboto-Medium'
             font-weight: 700
             font-size: 85px
@@ -175,6 +178,8 @@ body
             color: #FCBC3D
             span
                 display: block
+            &.prize
+                padding-top: 0
         a
             width: 559px
             height: 91px

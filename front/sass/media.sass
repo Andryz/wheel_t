@@ -54,7 +54,8 @@
       width: 950px
       height: 645px
       p
-        padding: 166px 0 0 56px
+        //padding: 166px 0 0 56px
+        padding: 136px 0 0 56px
         font-size: 70px
         line-height: 80px
     .character-win
@@ -311,7 +312,7 @@
     box-sizing: border-box
     margin: 30px auto 0
     &__start, &__bonus, &__bonus-fs
-      font-size: 20px
+      font-size: 16px
       line-height: 23px
       text-align: center
       span
@@ -349,7 +350,8 @@
       background-size: cover
       p
         padding: 100px 0 0 32px
-        font-size: 32px
+        //font-size: 32px
+        font-size: 26px
         line-height: 38px
       a
         width: 269px
@@ -359,6 +361,14 @@
         margin: 13px 0 0 32px
         font-size: 24px
         line-height: 28px
+@media screen and (max-height: 1000px) and (min-height: 600px) and (max-width: 600px) and (min-width: 360px)
+  .wheel
+    width: 334px
+    height: 334px
+    &-btn
+      p
+        font-size: 30px
+        line-height: 53px
 
 @media screen and (max-height: 550px) and (min-height: 430px)
   .second-step.active .character-win

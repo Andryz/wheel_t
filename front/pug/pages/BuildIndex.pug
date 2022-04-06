@@ -8,27 +8,30 @@
                 img(src='./img/circle.png')
             .wheel-main(id='wheel')
                 img(src='./img/wheel.png')
-            .wheel-btn(id='wheel-btn')
+            .wheel-btn.btn-spin
                 img(src='./img/btn-spin.png')
                 p SPIN
         .character
             img(src='./img/character.png')
         .information(id='information')
-            .information__start.active(id='info-start')
+            .information__start.active.btn-spin
                 img(src='./img/arrow.svg')
                 span Try your luck. Spin the wheel
                 img(src='./img/arrow.svg')
-            .information__bonus 200% deposit bonus
+            .information__bonus.btn-spin
+                p Your win: 200% deposit bonus
+                p Try again
             .information__bonus-fs
-                p 200% deposit bonus
-                p 150FS
+                p Your win: 200% deposit bonus
+                p 150 Free spins
         .spins
             | Spins left:
             p(id='spins') 2
 
     .second-step(id='second-step')
         .win-info
-            p 200% deposit bonus
+            p Congratulations!
+            p.prize 200% deposit bonus
                 span + 150 FreeSpins
             a(href='#') take bonus
         .character-win
